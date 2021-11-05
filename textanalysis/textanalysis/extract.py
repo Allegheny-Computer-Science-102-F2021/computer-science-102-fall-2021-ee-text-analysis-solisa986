@@ -22,8 +22,15 @@ def extract_lines_including_blanks(input_lines: str) -> List[str]:
 def extract_lines_not_including_blanks(input_lines: str) -> List[str]:
     """Extract all of the lines, not including the blanks lines."""
     # extract all of the lines in the file, using splitlines
-    # filter out all of the blank lines that have a length of zero
+    extracted_text = []
+    text = input_lines.splitlines()
+    for extracted_line in text:
+        # filter out all of the blank lines that have a length of zero
+        if len(extracted_line) != 0:
+            filtered_text = filter(None, extracted_line)
+            extracted_text.append(filtered_text)
     # return the list of non-blank lines
+    return extracted_text
 
 
 def extract_paragraphs(input_lines: str) -> List[str]:
