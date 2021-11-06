@@ -6,6 +6,7 @@ from typing import Set
 from supervenn import supervenn  # type: ignore
 import matplotlib.pyplot as plot  # type: ignore
 
+import sys
 
 def visualize_sets(sets: List[Set[str]]):
     """Create a visualization of sets."""
