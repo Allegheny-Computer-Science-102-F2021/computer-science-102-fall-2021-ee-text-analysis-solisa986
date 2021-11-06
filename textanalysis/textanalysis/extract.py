@@ -52,17 +52,16 @@ def extract_paragraphs(input_lines: str) -> List[str]:
 def extract_unique_words_paragraphs(paragraphs: List[str]) -> List[Set[str]]:
     """Extract all of the unique words in each one of the paragraphs."""
     # go through each of the strings inside of the list and
-    extracted_set = []
-    # extract the unique words in each of the paragraphs
+    unique_set = []
     for find in paragraphs:
+        # extract the unique words in each of the paragraphs
         # collect the unique words for each paragraph in a set of strings
-        split_paragraph = find.split()
+        unique_words = set(find.split())
         # store each set of unique words in a separate index of a list
-        words = set(split_paragraph)
-        extracted_set.append(words)
+        unique_set.append(unique_words)
     # return a list that contains at each index a set of strings
     # such that every one of the sets contains the unique words for a paragraph
-    return extracted_set
+    return unique_set
 
 
 def extract_unique_words(sets: List[Set[str]]) -> Set[str]:
