@@ -22,9 +22,11 @@ def visualize_sets(sets: List[Set[str]]):
     # the program instead of being hard-coded as a string
     file_name = sys.argv[2]
     split = file_name.split('/')[1]
+    sliced = split.split('.')[0]
+    sliced_again = sliced.split('_')[0]
     # NOTE: you are not required to complete this task; however,
     # adding this feature to the program will make it easier for
     # you to complete the analysis of the text files using sets
-    plot.savefig(f"graphics/set-visualization-{split}.png")
+    plot.savefig(f"graphics/set-visualization-{sliced_again}.png")
     # return the dictionary of chunks for visualization purposes
     return supervenn_plot.chunks
