@@ -19,9 +19,11 @@ def visualize_sets(sets: List[Set[str]]):
     # NOTE: if you want to make the program more configurable, please
     # consider making this directory and file name a parameter to
     # the program instead of being hard-coded as a string
+    file_name = sys.argv[2]
+    split = file_name.split('/')[1]
     # NOTE: you are not required to complete this task; however,
     # adding this feature to the program will make it easier for
     # you to complete the analysis of the text files using sets
-    plot.savefig("graphics/set-visualization-generated.png")
+    plot.savefig(f"graphics/set-visualization-{split}.png")
     # return the dictionary of chunks for visualization purposes
     return supervenn_plot.chunks
