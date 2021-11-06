@@ -8,6 +8,7 @@ import re
 
 NEWLINES_RE = re.compile(r"\n{2,}")
 
+
 def extract_lines_including_blanks(input_lines: str) -> List[str]:
     """Extract all of the lines, including the blanks lines."""
     # extract all of the lines in the file, using splitlines
@@ -56,7 +57,8 @@ def extract_unique_words_paragraphs(paragraphs: List[str]) -> List[Set[str]]:
     for find in paragraphs:
         # extract the unique words in each of the paragraphs
         # collect the unique words for each paragraph in a set of strings
-        unique_words = set(find.split())
+        split_p = find.split()
+        unique_words = set(split_p)
         # store each set of unique words in a separate index of a list
         unique_set.append(unique_words)
     # return a list that contains at each index a set of strings
