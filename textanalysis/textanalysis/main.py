@@ -65,10 +65,14 @@ def main(
             )
             # extract and display the words that are in common for all of the sets
             common_words_set = extract.extract_common_words(list_of_paragraph_sets)
-            console.print(
-                f"\tThe words that are found across all sets are: {common_words_set}"
-            )
-            console.print()
+            if len(common_words_set) == 0:
+                console.print("\tThe words that are found across all sets are: None")
+                console.print()
+            else:
+                console.print(
+                    f"\tThe words that are found across all sets are: {common_words_set}"
+                )
+                console.print()
             # visualize the sets and then show all of the computed subsets
             console.print(
                 ":paintbrush:  Saving the visualization in graphics/set-visualization.png"
