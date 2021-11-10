@@ -27,9 +27,8 @@ def extract_lines_not_including_blanks(input_lines: str) -> List[str]:
     text = input_lines.splitlines()
     for extracted_line in text:
         # filter out all of the blank lines that have a length of zero
-        if len(extracted_line) != 0:
-            filtered_text = filter(None, extracted_line)
-            extracted_text.append(filtered_text)
+        if len(extracted_line) > 0:
+            extracted_text.append(extracted_line)
     # return the list of non-blank lines
     return extracted_text
 
@@ -57,8 +56,7 @@ def extract_unique_words_paragraphs(paragraphs: List[str]) -> List[Set[str]]:
     for find in paragraphs:
         # extract the unique words in each of the paragraphs
         # collect the unique words for each paragraph in a set of strings
-        split_p = find.split()
-        unique_words = set(split_p)
+        unique_words = set(re.findall(r"\w+", find))
         # store each set of unique words in a separate index of a list
         unique_set.append(unique_words)
     # return a list that contains at each index a set of strings
