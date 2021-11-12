@@ -383,22 +383,22 @@ The words that input_one.txt has in common across all of the paragraphs is 'Make
 
 ### Using the console output and visualization for the `input_one.txt`, what trends do you see? Interpret these trends.
 
-In the console output, I noticed that there were a lot of words that were not found in any of the other sets. Most of the unique words came from Set  and Set 3, which contains the words from paragraph 3 and 4. The total number of words inside of each set are relatively the same, ranging from 27-40 words. 
+In the console output, I noticed that there were a lot of words that were not found in any of the other sets. Most of the unique words came from Set  and Set 3, which contains the words from paragraph 3 and 4. The total number of words inside of each set are relatively the same, ranging from 27-40 words. As the different sets are being shown, number of common words are shown by sets, with the total number of words analyzed being shown as well.
 
 ### Using the console output and visualization for the `generated_one.txt`, what trends do you see? Interpret these trends.
 
-Provide response to this question, demonstrating your knowledge of the use and visualization of sets.
+The trends that I see are that the number of sets has changed. Initially, we only had 5 sets, but in this output, there are 7 sets. This indicates that the number of sets are determined by the number of paragraphs. In this output, there were not any unique common founds inside all of the paragraphs. This is shown through the graphic because there is not an instance where all of the sets are colored in. As the different sets are being shown, number of common words are shown by sets, with the total number of words analyzed being shown as well.
 
 ## Professional Development
 
 ### What are the similarities and differences between `set`, `FrozenSet`, and `FiniteSet`?
 
-Provide a response to this question, explaining these three implementations of the set discrete structure.
+A set, a frozenset, and a finiteset are essentially all an ordered collection of values that contain duplicates. Where they differ is that a set is immutable, which means that the contents cannot be changed. A finiteset is mutable and can be specifically written in a roster format. A frozenset is sort of like a copy of what the contents of a set are, which means that nothing can be added to or reordered in this set.
 
 ### At an intuitive and informal level what is the `aitextgen` package and how does it work?
 
-Provide a response to this question, leveraging the documentation for this tool on sites like GitHub.
+aitextgen is a Python package that utilizes specific tools in order to generate text given an input text. This creates a completely artificial text. It works by analyzing the patterns and writing style of the given input text file, generating text that mimics the same patterns and styles, and then outputs the generated text in the terminal.
 
 ### At your own option, do you have any other insights to share about this assignment?
 
-At your own option, provide further insights about this assignment!
+I think that this assignment was appropiately difficult. It was confusing at the beginning because of how long it took the dependencies to install, but it is still good.
